@@ -1,4 +1,17 @@
 :root {
   --white-color: #d4d4d4;
   --dark-color: #333333;
+  --purple-color: #5a006e;
+}
+
+body{
+  color: var(--white-color);
+  background-color: var(--dark-color);
+  padding: 0;
+  margin: 0;
+}
+
+#root{
+  margin: 0;
+  padding: 0;
 }

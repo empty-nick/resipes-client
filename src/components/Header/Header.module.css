@@ -1,0 +1,21 @@
+.content{
+	background-color: var(--purple-color);
+	width: 100%;
+
+	display: grid;
+	grid-template-areas: 'menu profile';
+	grid-template-columns: 10fr 2fr;
+	padding: 1em 0;
+}
+
+.menu{
+	grid-area: menu;
+	display: grid;
+	place-items: center;
+}
+
+.profile{
+	grid-area: profile;
+	display: grid;
+	place-items: center;
+}
