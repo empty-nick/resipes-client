@@ -3,9 +3,13 @@
 	width: 100%;
 
 	display: grid;
-	grid-template-areas: 'menu profile';
-	grid-template-columns: 10fr 2fr;
+	grid-template-areas: 'logo menu profile';
+	grid-template-columns: 2fr 10fr 2fr;
 	padding: 1em 0;
+}
+
+.logo{
+	grid-area: logo;
 }
 
 .menu{
