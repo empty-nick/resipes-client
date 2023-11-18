@@ -1,0 +1,32 @@
+.welcome{
+	grid-area: main;
+	background-color: var(--purple-color);
+	color: var(--white-color);
+	width: 90%;
+	height: 100%;
+	padding: 1em;
+
+	border-radius: var(--border-radius);
+
+	display: grid;
+	grid-template-areas:
+					'title'
+					'subdata'
+					'maininfo';
+	grid-auto-rows: 1fr 1fr 12fr;
+}
+
+.title{
+	grid-area: title;
+	font-size: 26px;
+}
+
+.subdata{
+	grid-area: subdata;
+	font-size: 14px;
+}
+
+.main{
+	grid-area: maininfo;
+	font-size: 18px;
+}
