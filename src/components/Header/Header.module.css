@@ -1,0 +1,54 @@
+.container{
+	width: 100%;
+
+	display: grid;
+	place-items: center;
+
+	padding: 1em 0;
+}
+
+.content{
+	background-color: var(--purple-color);
+	width: 95%;
+	height: 95%;
+	padding: .3em 0;
+
+	border-radius: var(--border-radius);
+
+	display: grid;
+	grid-template-areas: 'logo menu profile';
+	grid-template-columns: 2fr 10fr 2fr;
+	gap: 2em;
+}
+
+.logo{
+	grid-area: logo;
+}
+
+.menu{
+	grid-area: menu;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 1em;
+}
+
+.profile{
+	grid-area: profile;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: .7em;
+
+	background-color: var(--dark-color);
+	padding: 0 .8em;
+	margin: .8em;
+	border-radius: var(--border-radius);
+}
+
+.usernameField{
+	color: var(--white-color);
+	font-size: 20px;
+}
