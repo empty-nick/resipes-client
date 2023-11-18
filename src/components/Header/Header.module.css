@@ -1,11 +1,24 @@
+.container{
+	width: 100%;
+
+	display: grid;
+	place-items: center;
+
+	padding: 1em 0;
+}
+
 .content{
 	background-color: var(--purple-color);
-	width: 100%;
+	width: 95%;
+	height: 95%;
+	padding: .3em 0;
+
+	border-radius: var(--border-radius);
 
 	display: grid;
 	grid-template-areas: 'logo menu profile';
 	grid-template-columns: 2fr 10fr 2fr;
-	padding: 1em 0;
+	gap: 2em;
 }
 
 .logo{
@@ -23,6 +36,19 @@
 
 .profile{
 	grid-area: profile;
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: .7em;
+
+	background-color: var(--dark-color);
+	padding: 0 .8em;
+	margin: .8em;
+	border-radius: var(--border-radius);
+}
+
+.usernameField{
+	color: var(--white-color);
+	font-size: 20px;
 }

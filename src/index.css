@@ -1,7 +1,8 @@
 :root {
   --white-color: #d4d4d4;
   --dark-color: #333333;
-  --purple-color: #5a006e;
+  --purple-color: #601970;
+  --border-radius: 1em 1.6em;
 }
 
 body{
