@@ -1,0 +1,43 @@
+.content{
+	background-color: var(--white-color);
+	border-radius: var(--border-radius);
+	color: var(--dark-color);
+	padding: 1em;
+
+	width: max(18vw, 200px);
+	aspect-ratio: 2/3;
+	/*height: min-content;*/
+
+	display: grid;
+	place-items: center;
+}
+
+/*.imageHandler{*/
+/*	height: 100%;*/
+/*	aspect-ratio: 1/1;*/
+/*}*/
+
+.image{
+	width: 15vw;
+	aspect-ratio: 1/1;
+}
+
+.title{
+	font-size: 22px;
+}
+
+.description{
+	margin: 0;
+	background-color: var(--dark-color);
+	color: var(--white-color);
+	max-width: 80%;
+
+	display: grid;
+	place-items: center;
+
+	border-radius: var(--border-radius);
+	padding: .5em;
+
+	font-size: 18px;
+	letter-spacing: 1px;
+}
