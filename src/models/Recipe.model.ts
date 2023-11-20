@@ -1,13 +1,25 @@
-export interface IRecipeModal {
+export type RecipeStatus = 'ACTIVE' | 'HIDE_BY_USER' | 'HIDE_BY_ADMIN'
+
+export interface IRecipeShort {
   recipe_id: number;
-  user_id: number;
+  image: string;
   title: string;
-  description: string;
-  recipe: IRecipe[]
+  short_description?: string;
 }
 
-export interface IRecipe{
-  stage_name: string;
-  image?: string;
-  stage_description: string;
+export interface IStage {
+  id: number;
+  step: string;
+  image: string;
+  recipe_text: string;
+  recipe_id: number;
+}
+
+export interface IRecipeFull extends IRecipeShort {
+  "stages": IStage[];
+  "description": string;
+  "created_at": string;
+  "updated_at": string;
+  "state_recipe": RecipeStatus;
+  "user_id": number;
 }
