@@ -1,10 +1,12 @@
-export type RecipeStatus = 'ACTIVE' | 'HIDE_BY_USER' | 'HIDE_BY_ADMIN'
+export type TReactions = {
+  like: number;
+  dislike: number;
+}
 
 export interface IRecipeShort {
   recipe_id: number;
   image: string;
   title: string;
-  state_recipe: RecipeStatus;
   short_description?: string;
 }
 
