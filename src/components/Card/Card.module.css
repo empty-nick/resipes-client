@@ -5,6 +5,7 @@
 	border: 5px solid var(--dark-blue-color);
 	color: var(--white-color);
 	padding: 1em;
+	gap: .3em;
 
 	width: max(18vw, 200px);
 	aspect-ratio: 2/3;
