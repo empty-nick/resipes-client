@@ -1,11 +1,12 @@
 import styles from './TextBlock.module.css'
+import { ReactNode } from "react";
 
 type TBorderColor = 'red' | 'blue' | 'default' | 'purple'
 type TFontSize = [number, 'px'|'em'|'rem']
 type TBorderSize = [number, 'px'|'em'|'rem']
 
 interface ITextBlockProps {
-  children: string;
+  children: string | ReactNode;
   borderColor: TBorderColor;
   borderSize: TBorderSize;
   fontSize: TFontSize;
@@ -31,7 +32,9 @@ export const TextBlock = ({ children, borderColor, fontSize, isUserSelectable = 
   const copyToClipboard = async () => {
     if (!isCopyTextContent)
       return
-    await navigator.clipboard.writeText(children)
+    if (typeof children === "string") {
+      await navigator.clipboard.writeText(children)
+    }
   }
 
   return (
