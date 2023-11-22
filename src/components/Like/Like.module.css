@@ -1,0 +1,17 @@
+.content{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: .5em;
+}
+
+.like{
+	font-size: 30px;
+}
+.active{
+	color: var(--dark-color);
+}
+
+.inactive{
+	color: var(--red-color);
+}

@@ -14,10 +14,18 @@ export const serveApi = createApi({
     getAllRecipesShort: build.query<IRecipeShort[], null>({
       query: () => '/recipes',
     }),
+    addNewRecipeToFavorites: build.mutation<IRecipeShort, number>({
+      query: (liked) => ({
+        method: 'POST',
+        url: '/recipe/add-like',
+        body: { liked }
+      })
+    })
   })
 })
 
 export const {
   useGetHeaderItemsQuery,
-  useGetAllRecipesShortQuery
+  useGetAllRecipesShortQuery,
+  useAddNewRecipeToFavoritesMutation
 } = serveApi
