@@ -4,6 +4,7 @@ export interface IRecipeShort {
   recipe_id: number;
   image: string;
   title: string;
+  state_recipe: RecipeStatus;
   short_description?: string;
 }
 
@@ -16,10 +17,9 @@ export interface IStage {
 }
 
 export interface IRecipeFull extends IRecipeShort {
-  "stages": IStage[];
-  "description": string;
-  "created_at": string;
-  "updated_at": string;
-  "state_recipe": RecipeStatus;
-  "user_id": number;
+  stages: IStage[];
+  description: string;
+  created_at: string;
+  updated_at: string;
+  user_id: number;
 }

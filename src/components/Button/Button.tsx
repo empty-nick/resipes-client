@@ -26,7 +26,6 @@ export const Button = ({ message, onClick, btnType = 'active', isActive = true }
     if (btnType === 'active')
       onClick()
   }
-  console.log(handleButtonTypes(btnType))
   return (
     <button disabled={!isActive} onClick={handleClick} className={`${styles.btn} ${handleButtonTypes(btnType)}`}>
       {message}
