@@ -7,13 +7,12 @@ import { Like } from "../Like";
 import { Button } from "../Button";
 import styles from './Card.module.css'
 
-export const Card = ({title, image, recipe_id, short_description, state_recipe}: IRecipeShort): ReactElement | null => {
+export const Card = ({title, image, recipe_id, short_description}: IRecipeShort): ReactElement => {
   const navigator = useNavigate()
   const handleClick = () => {
     navigator(`${recipe_id}`)
   }
-  if (state_recipe !== 'ACTIVE')
-    return null
+
   const errorImageUrl = 'https://cdn.pixabay.com/photo/2017/02/12/21/29/false-2061131_640.png'
   return (
     <div className={styles.content}>
