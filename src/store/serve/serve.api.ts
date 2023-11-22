@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IHeaderItems } from "../../models/Header.model.ts";
-import { IRecipeShort } from "../../models/Recipe.model.ts";
+import { IRecipeFull, IRecipeShort } from "../../models/Recipe.model.ts";
 
 export const serveApi = createApi({
   reducerPath: 'serveApi',
@@ -13,6 +13,9 @@ export const serveApi = createApi({
     }),
     getAllRecipesShort: build.query<IRecipeShort[], null>({
       query: () => '/recipes',
+    }),
+    getFullRecipe: build.query<IRecipeFull, number>({
+      query: (id) => `/recipes/${id}`
     }),
     addNewRecipeToFavorites: build.mutation<IRecipeShort, number>({
       query: (liked) => ({
@@ -27,5 +30,6 @@ export const serveApi = createApi({
 export const {
   useGetHeaderItemsQuery,
   useGetAllRecipesShortQuery,
+  useGetFullRecipeQuery,
   useAddNewRecipeToFavoritesMutation
 } = serveApi
