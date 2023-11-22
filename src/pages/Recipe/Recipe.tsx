@@ -4,6 +4,7 @@ import { useGetAllRecipesShortQuery } from "../../store/serve/serve.api.ts";
 
 export const Recipe = () => {
   const { data} = useGetAllRecipesShortQuery(null)
+  console.log(data)
   // console.log('data', data)
   // const data = [
   //   {
@@ -24,7 +25,6 @@ export const Recipe = () => {
             image={recipe.image}
             title={recipe.title}
             short_description={recipe.short_description}
-            state_recipe={recipe.state_recipe}
             key={recipe.recipe_id}
           />
         ))}
