@@ -1,0 +1,31 @@
+.btn{
+	background-color: var(--dark-color);
+	color: var(--white-color);
+	border-radius: var(--border-radius);
+	padding: .5em .9em;
+	font-size: 20px;
+
+	transition: .3s;
+}
+
+.active{
+	border: 5px solid var(--purple-color);
+}
+
+.inactive{
+	border: 5px solid #808080;
+	background-color: #8c8c8c;
+}
+
+.error{
+	border: 5px solid var(--red-color);
+}
+
+.error:hover{
+	cursor: not-allowed;
+}
+
+.active:hover{
+	background-color: var(--dark-color-hovered);
+	cursor: pointer;
+}
