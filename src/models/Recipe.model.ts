@@ -8,16 +8,22 @@ export interface IRecipeShort {
   short_description?: string;
 }
 
+export interface IIngredients {
+  name: string;
+  quantity: string;
+  unit_dimensions: string;
+}
+
 export interface IStage {
   id: number;
   step: string;
   image: string;
   recipe_text: string;
-  recipe_id: number;
 }
 
 export interface IRecipeFull extends IRecipeShort {
   stages: IStage[];
+  ingredients: IIngredients[];
   description: string;
   created_at: string;
   updated_at: string;
