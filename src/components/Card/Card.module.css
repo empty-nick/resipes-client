@@ -1,6 +1,7 @@
 .content{
 	background-color: var(--white-color);
 	border-radius: var(--border-radius);
+	border: 5px solid var(--purple-color);
 	color: var(--dark-color);
 	padding: 1em;
 
@@ -13,12 +14,13 @@
 }
 
 /*.imageHandler{*/
-/*	height: 100%;*/
-/*	aspect-ratio: 1/1;*/
+/*	border-radius: var(--border-radius);*/
 /*}*/
 
 .image{
 	width: 15vw;
+	border-radius: var(--border-radius);
+	border: 3px solid var(--purple-color);
 	aspect-ratio: 1/1;
 }
 
@@ -36,7 +38,7 @@
 	place-items: center;
 
 	border-radius: var(--border-radius);
-	padding: .5em;
+	padding: .5em .9em;
 
 	font-size: 18px;
 	letter-spacing: 1px;

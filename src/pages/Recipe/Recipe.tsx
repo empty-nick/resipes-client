@@ -1,18 +1,18 @@
 import styles from './Recipe.module.css'
 import { Card } from "../../components/Card";
-import { useGetAllRecipesShortQuery } from "../../store/serve/serve.api.ts";
+// import { useGetAllRecipesShortQuery } from "../../store/serve/serve.api.ts";
 
 export const Recipe = () => {
-  const { data} = useGetAllRecipesShortQuery(null)
-  console.log('data', data)
-  // const data = [
-  //   {
-  //     "recipe_id": 1,
-  //     "title": "Как жёстко выебать котю?",
-  //     "short_description": "он любит когда я трахаю его",
-  //     "image": "http://26.158.164.189:8000/KotkaMaks"
-  //   }
-  // ]
+  // const { data} = useGetAllRecipesShortQuery(null)
+  // console.log('data', data)
+  const data = [
+    {
+      "recipe_id": 1,
+      "title": "Как жёстко выебать котю?",
+      "short_description": "он любит когда я трахаю его",
+      "image": "https://www.allrecipes.com/thmb/nb2eEifCwlw1yc5gnXMwBy4BkXQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/23600-worlds-best-lasagna-DDMFS-2x1-1193-40ded59b2a224312b66bdafbb885adc0.jpg"
+    }
+  ]
 
   return (
     <div className={styles.content}>
