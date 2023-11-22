@@ -23,7 +23,7 @@ export const Like = ({ recipeId }: TLikeProps) => {
   }
   return (
     <div className={content} onClick={toggleLike}>
-      <FaHeart className={`${like} ${isLikeActive ? active : inactive}`} />
+      <FaHeart className={`${like} ${isLikeActive ? inactive : active}`} />
     </div>
   )
 }

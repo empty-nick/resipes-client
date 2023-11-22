@@ -1,26 +1,29 @@
 import styles from './TextBlock.module.css'
 
-type TBorderColor = 'red' | 'blue' | 'default'
+type TBorderColor = 'red' | 'blue' | 'default' | 'purple'
 type TFontSize = [number, 'px'|'em'|'rem']
+type TBorderSize = [number, 'px'|'em'|'rem']
 
 interface ITextBlockProps {
   children: string;
   borderColor: TBorderColor;
+  borderSize: TBorderSize;
   fontSize: TFontSize;
   isUserSelectable?: boolean;
   isCopyTextContent?: boolean;
 }
 
-export const TextBlock = ({ children, borderColor, fontSize, isUserSelectable = true, isCopyTextContent = false }: ITextBlockProps) => {
+export const TextBlock = ({ children, borderColor, fontSize, isUserSelectable = true, isCopyTextContent = false, borderSize }: ITextBlockProps) => {
   const getColor = (color: TBorderColor) => {
     switch (color) {
-      case 'blue':
-        return '#005aa9'
-      case 'red':
-        return '#a90000'
-
-      default:
+      case 'purple':
         return '#601970'
+      case 'red':
+        return '#b60000'
+
+      case 'blue':
+      default:
+        return '#006085'
     }
   }
 
@@ -28,14 +31,13 @@ export const TextBlock = ({ children, borderColor, fontSize, isUserSelectable = 
   const copyToClipboard = async () => {
     if (!isCopyTextContent)
       return
-
     await navigator.clipboard.writeText(children)
   }
 
   return (
-    <div className={styles.content} onClick={copyToClipboard} style={{
+    <div className={`${styles.content} `} onClick={copyToClipboard} style={{
         fontSize: fontSize.join(''),
-        border: `5px solid ${getColor(borderColor)}`,
+        border: `${borderSize.join('')} solid ${getColor(borderColor)}`,
         userSelect: isUserSelectable ? 'auto' : 'none'
       }}>
       {children}

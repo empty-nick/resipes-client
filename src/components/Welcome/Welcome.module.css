@@ -1,6 +1,6 @@
 .welcome{
 	grid-area: main;
-	background-color: var(--purple-color);
+	background-color: var(--dark-blue-color);
 	color: var(--white-color);
 	width: 90%;
 	height: 100%;

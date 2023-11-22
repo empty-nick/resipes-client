@@ -9,7 +9,7 @@
 }
 
 .active{
-	border: 5px solid var(--purple-color);
+	border: 5px solid var(--dark-blue-color);
 }
 
 .inactive{
