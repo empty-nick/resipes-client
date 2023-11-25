@@ -5,6 +5,7 @@
 	border: 5px solid var(--dark-blue-color);
 	color: var(--white-color);
 	padding: 1em;
+	gap: .3em;
 
 	width: max(18vw, 200px);
 	aspect-ratio: 2/3;
@@ -23,20 +24,4 @@
 .title{
 	max-width: 90%;
 	text-align: center;
-}
-
-.description{
-	margin: 0;
-	background-color: var(--dark-color);
-	color: var(--white-color);
-	max-width: 80%;
-
-	display: grid;
-	place-items: center;
-
-	border-radius: var(--border-radius);
-	padding: .5em .9em;
-
-	font-size: 18px;
-	letter-spacing: 1px;
 }
